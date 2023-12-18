@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class TowerChanger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    TowerSelect towerSelect;
+    private void Start()
     {
-        
+        towerSelect = GetComponent<TowerSelect>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void FristTower()
     {
-        
+        towerSelect.towerNumber = 1;
+    }
+    private void SecondTower()
+    {
+        towerSelect.towerNumber = 1;
+    }
+    private void ThirdTower()
+    {
+        towerSelect.towerNumber = 1;
     }
 }

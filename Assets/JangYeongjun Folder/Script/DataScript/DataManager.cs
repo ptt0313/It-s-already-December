@@ -8,7 +8,7 @@ public class PalyerData
     public int Coin;
     public int Score;
     public int Round;
-    public string Name;
+    public string PlayerName;
 
 }
 
