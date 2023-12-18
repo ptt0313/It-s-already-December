@@ -14,4 +14,7 @@ public class TowerInfoData : ScriptableObject
     public float scannigRange;
     public LayerMask targetLayer;
     public int targetCount;
+
+    [Header("TowerAttackInfo")]
+    public TowerAttackBase towerAttackData;
 }
