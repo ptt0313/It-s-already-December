@@ -17,4 +17,8 @@ public class Button : MonoBehaviour
     {
         SceneManager.LoadScene("StartScene");
     }
+    public void  StageResetScene()
+    {
+        SceneManager.LoadScene("Stage1");
+    }
 }
