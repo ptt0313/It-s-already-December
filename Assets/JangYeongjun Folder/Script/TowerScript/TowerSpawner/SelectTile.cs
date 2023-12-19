@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class SelectTile : MonoBehaviour
 {
-    private TowerSelect towerSelect;
+    private TowerSpawn towerSpawn;
     private Camera cameraMain;
-
+    public int towerNumber = 0;
     private Ray ray;
     private RaycastHit hit;
+
     private void Awake()
     {
         cameraMain = Camera.main;
-        towerSelect = GetComponent<TowerSelect>();
+        towerSpawn = GetComponent<TowerSpawn>();
     }
 
     private void Update()
@@ -25,7 +26,7 @@ public class SelectTile : MonoBehaviour
             {
                 if(hit.transform.CompareTag("Tile"))
                 {
-                    towerSelect.SelectTower(hit.transform);
+                    towerSpawn.SpawnTower(towerNumber, hit.transform);
                 }
             }
         }
