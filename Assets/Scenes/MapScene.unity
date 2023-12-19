@@ -141,6 +141,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!58 &136196509
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136196505}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1001 &364068578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1122,11 +1157,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7827128341252597585, guid: 9adbd767c9bd1e5479ab7e5c341ad283, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.48
+      value: 5.499
       objectReference: {fileID: 0}
     - target: {fileID: 7827128341252597585, guid: 9adbd767c9bd1e5479ab7e5c341ad283, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.64
+      value: 3.69
       objectReference: {fileID: 0}
     - target: {fileID: 7827128341252597585, guid: 9adbd767c9bd1e5479ab7e5c341ad283, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1164,6 +1199,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8741264147925355682, guid: 9adbd767c9bd1e5479ab7e5c341ad283, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1171,4 +1210,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8741264147925355682, guid: 9adbd767c9bd1e5479ab7e5c341ad283, type: 3}
       insertIndex: -1
       addedObject: {fileID: 136196506}
+    - targetCorrespondingSourceObject: {fileID: 8741264147925355682, guid: 9adbd767c9bd1e5479ab7e5c341ad283, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 136196509}
   m_SourcePrefab: {fileID: 100100000, guid: 9adbd767c9bd1e5479ab7e5c341ad283, type: 3}
