@@ -13,6 +13,8 @@ public class TargetScanningController : MonoBehaviour
     private float scanRange;
     private int scanCount;
 
+    public List<GameObject> Targets { get { return targets; } }
+
     private void Awake()
     {
         _towerInfo = GetComponent<TowerInfoHandler>();
@@ -30,7 +32,9 @@ public class TargetScanningController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Enter");
         if (targets.Count >= scanCount) return;
+        
 
         if (!targets.Contains(collision.gameObject) && ((1 << collision.gameObject.layer) & enemyCollisionLayer.value) != 0) // 나중에 태그 검사 할 때 레이어 검사를 공통으로 묶어서 메소드로 빼면 우선순위 검사 추가가 쉬울듯
         {

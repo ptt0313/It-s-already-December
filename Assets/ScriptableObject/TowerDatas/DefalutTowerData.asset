@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: sample
   towerCost: 1
-  scannigRange: 2.5
+  scannigRange: 4
   targetLayer:
     serializedVersion: 2
     m_Bits: 64
-  targetCount: 1
+  targetCount: 2
+  towerAttackData: {fileID: 11400000, guid: adef6446464293c42a0eb37b2d37b240, type: 2}
