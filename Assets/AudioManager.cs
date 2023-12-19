@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     public AudioClip backgroundMusic;
-    //public AudioClip buttonClickSound;
+    public AudioClip buttonClickSound;
 
     private AudioSource audioSource;
 
