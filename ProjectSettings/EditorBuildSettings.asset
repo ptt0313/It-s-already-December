@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 213886d45d369374887ca69144c9dc8c
   - enabled: 1
+    path: Assets/Scenes/SlotScene.unity
+    guid: e13f667297221424698be8907250ccac
+  - enabled: 1
     path: Assets/Scenes/Stage1.unity
     guid: 35f38a30c060d0a4e8e3417e879d8e65
   m_configObjects:
