@@ -2,39 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
-    public float speed = 3f;
-    private Transform target;
-    private int waypointIdx = 0;
+    private int wayPointCount;
+    private Transform[] wayPoints;
+    private int currentIndex = 0;
+    private Movement2D movement2D;
 
-    private void Start()
+    public void Setup(Transform[] wayPoints)
     {
-        target = WayPoints.points[0];
+        movement2D = GetComponent<Movement2D>();
+
+        wayPointCount = wayPoints.Length;
+        this.wayPoints = new Transform[wayPointCount];
+        this.wayPoints = wayPoints;
+
+        transform.position = wayPoints[currentIndex].position;
+
+        StartCoroutine("OnMove");
     }
 
-    private void Update()
+    private IEnumerator OnMove()
     {
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        NextMoveTo();
 
-        if(Vector3.Distance(transform.position, target.position) <= 0.4f)
+        while (true)
         {
-            GetNextWayPoint();
+            transform.Rotate(Vector3.forward * 10);
+
+            if (Vector3.Distance(transform.position, wayPoints[currentIndex].position) < 0.02f * movement2D.MoveSpeed)
+            {
+                NextMoveTo();
+            }
+            yield return null;
         }
     }
 
-    void GetNextWayPoint()
+    private void NextMoveTo()
     {
 
-        if(waypointIdx >= WayPoints.points.Length - 1)
+        if (currentIndex < wayPointCount - 1)
+        {
+            transform.position = wayPoints[currentIndex].position;
+
+            currentIndex++;
+            Vector3 direction = (wayPoints[currentIndex].position - transform.position).normalized;
+            movement2D.MoveTo(direction);
+        }
+        else
         {
             Destroy(gameObject);
-            return;
         }
-        waypointIdx++;
-        target = WayPoints.points[waypointIdx];
-
-
     }
+
+
 }
