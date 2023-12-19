@@ -929,7 +929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1207963174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,7 +1031,7 @@ GameObject:
   - component: {fileID: 1208282323}
   - component: {fileID: 1208282322}
   m_Layer: 5
-  m_Name: SettingExitButton
+  m_Name: TutorialExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1301,12 +1301,12 @@ GameObject:
   - component: {fileID: 1672250040}
   - component: {fileID: 1672250039}
   m_Layer: 5
-  m_Name: SettingCanvas
+  m_Name: TutorialCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1672250039
 MonoBehaviour:
   m_ObjectHideFlags: 0
