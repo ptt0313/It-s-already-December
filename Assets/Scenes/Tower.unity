@@ -4426,9 +4426,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers:
-  - {fileID: 5774202705007047438, guid: 3d350e5789d7d84439f1d51403099861, type: 3}
-  - {fileID: 4049212859649199322, guid: 0e172c2f8bbef8149b4636eec8339ab9, type: 3}
-  - {fileID: 8354589742899572863, guid: 26f30eed9cca848488e0b6dab97ed7ad, type: 3}
+  - {fileID: 4371130115410814733, guid: 3d350e5789d7d84439f1d51403099861, type: 3}
+  - {fileID: 4371130115410814733, guid: 03a17649e0327694896f0a288e0791f2, type: 3}
+  - {fileID: 9008250667988948399, guid: 26f30eed9cca848488e0b6dab97ed7ad, type: 3}
 --- !u!114 &692297750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4895,14 +4895,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 30
-    m_Right: 30
-    m_Top: 60
+    m_Left: 100
+    m_Right: 100
+    m_Top: 50
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
+  m_CellSize: {x: 80, y: 150}
   m_Spacing: {x: 20, y: 50}
   m_Constraint: 0
   m_ConstraintCount: 2
