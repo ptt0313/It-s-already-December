@@ -175,7 +175,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &189588834
 PrefabInstance:
@@ -1425,7 +1425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1041375641}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Start,EndPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1446,7 +1446,7 @@ Transform:
   - {fileID: 1396837025}
   - {fileID: 919663291}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1102491583
 GameObject:
