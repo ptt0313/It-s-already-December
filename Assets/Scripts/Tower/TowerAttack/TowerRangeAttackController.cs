@@ -34,11 +34,6 @@ public class TowerRangeAttackController : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
         if (_lastAttackDelay > 0f)

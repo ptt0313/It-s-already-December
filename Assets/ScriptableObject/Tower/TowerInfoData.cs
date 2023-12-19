@@ -17,5 +17,6 @@ public class TowerInfoData : ScriptableObject
     public int targetCount;
 
     [Header("TowerAttackInfo")]
+    [Tooltip("TowerAttackBaseData를 상속 받은 공격 파일을 여기에 연결하면 됩니다.")]
     public TowerAttackBaseData towerAttackData;
 }
