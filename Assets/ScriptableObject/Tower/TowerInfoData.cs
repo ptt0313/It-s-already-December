@@ -9,6 +9,7 @@ public class TowerInfoData : ScriptableObject
     [Header("TowerInfo")]
     public string towerName;
     public int towerCost;
+    public Sprite towerImage;
 
     [Header("TowerScanInfo")]
     public float scannigRange;

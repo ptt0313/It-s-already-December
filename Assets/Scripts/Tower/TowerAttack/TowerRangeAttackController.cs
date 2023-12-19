@@ -10,7 +10,7 @@ public class TowerRangeAttackController : MonoBehaviour
     private TowerAttackBaseData _rangeAttackData;
     private TargetScanningController _targetData;
 
-    [SerializeField] private GameObject _bullet;
+    private GameObject _bullet;
 
     private float _lastAttackDelay = 0f;
 
@@ -20,7 +20,18 @@ public class TowerRangeAttackController : MonoBehaviour
         _rangeAttackData = _infoHandler.TowerInfo.towerAttackData;
         _targetData = gameObject.GetComponent<TargetScanningController>();
         _bulletSpawnPosition = transform.Find("MainSprite").Find("AttackPivot");
-        _bullet = Resources.Load<GameObject>("Tower/Bullet");
+        if (_rangeAttackData is TowerRangeAttackData)
+        {
+            TowerRangeAttackData rangeAttackData = _rangeAttackData as TowerRangeAttackData;
+            if (rangeAttackData.bulletPrefab == null)
+            {
+                Debug.LogError("bullet link empty");
+            }
+            else
+            {
+                _bullet = rangeAttackData.bulletPrefab;
+            }
+        }
     }
 
     private void Start()
