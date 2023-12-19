@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DefalutTowerData", menuName = "TowerData/Defalut")]
+[CreateAssetMenu(fileName = "TowerInfoData", menuName = "TowerData/InfoData")]
 
 public class TowerInfoData : ScriptableObject
 {
@@ -16,5 +16,5 @@ public class TowerInfoData : ScriptableObject
     public int targetCount;
 
     [Header("TowerAttackInfo")]
-    public TowerAttackBase towerAttackData;
+    public TowerAttackBaseData towerAttackData;
 }
