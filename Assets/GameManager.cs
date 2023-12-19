@@ -2,15 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject _victory;
+    public Text life;
     [SerializeField] private int Life = 3;
+    private void Start()
+    {
+        UpdateLifeText();
+    }
+    private void UpdateLifeText()
+    {
+        life.text = Life.ToString();
+    }
     public void DecreaseLife(int amount)
     {
         Life -= amount;
         Debug.Log("체력감소");
+        UpdateLifeText();
         if (Life <= 0)
         {
             //라이프가 0이하가 됬을시 게임오버 부르기
