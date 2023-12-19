@@ -8,8 +8,6 @@ public class EnemyObjectable : ScriptableObject
     [Header("Attack Info")]
 
     public int speed;
-    public float damage;
-    public int Hp;
     public int maxHp;
 
 }
