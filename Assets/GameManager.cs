@@ -2,57 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject _victory;
-    public Text life;
     [SerializeField] private int Life = 3;
-    private void Start()
-    {
-        UpdateLifeText();
-    }
-    private void UpdateLifeText()
-    {
-        life.text = Life.ToString();
-    }
     public void DecreaseLife(int amount)
     {
         Life -= amount;
-        Debug.Log("Ï≤¥Î†•Í∞êÏÜå");
-        UpdateLifeText();
+        Debug.Log("√º∑¬∞®º“");
         if (Life <= 0)
         {
-            //ÎùºÏù¥ÌîÑÍ∞Ä 0Ïù¥ÌïòÍ∞Ä Îê¨ÏùÑÏãú Í≤åÏûÑÏò§Î≤Ñ Î∂ÄÎ•¥Í∏∞
+
+            //∂Û¿Ã«¡∞° 0¿Ã«œ∞° âÁ¿ªΩ√ ∞‘¿”ø¿πˆæ¿ ∫Œ∏£±‚
             GameOver();
         }
     }
     private void GameOver()
     {
-        // Ï¢ÖÎ£åÌåùÏóÖ Î∂àÎü¨Ïò§Í∏∞
+        // ∞‘¿” ø¿πˆ Ω√¿« √≥∏Æ
+        // ¡æ∑·∆Àæ˜ OR ∞‘¿”ø¿πˆæ¿ ∫“∑Øø¿±‚
         Debug.Log("Game Over");
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (gameObject.layer == LayerMask.NameToLayer("Enemy"))
-        {
-            Debug.Log("Ï∂©Îèå");
-            Destroy(collision.gameObject);
-            DecreaseLife(1);
-        }
-    }
-    private void OnDestroy()
-    {
-        // ÌååÍ¥¥Îêú Í≤åÏûÑ Ïò§Î∏åÏ†ùÌä∏Ïùò Î†àÏù¥Ïñ¥Í∞Ä BossÏùº Îïå _victoryÎ•º ÌôúÏÑ±Ìôî
-        if (gameObject.layer == LayerMask.NameToLayer("Boss"))
-        {
-            Invoke("GameVictory", 3f);
-        }
-    }
-    private void GameVictory()
-    {
-        
-        _victory.SetActive(true);
     }
 }
