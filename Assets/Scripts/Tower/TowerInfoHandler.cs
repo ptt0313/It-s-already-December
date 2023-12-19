@@ -11,7 +11,7 @@ public class TowerInfoHandler : MonoBehaviour
 
     private void Awake()
     {
-        _towerSprite = GetComponentInChildren<Sprite>();
+        //_towerSprite = GetComponentInChildren<Sprite>();
     }
 
     private void Start()
