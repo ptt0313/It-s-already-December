@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Tiles : MonoBehaviour
 {
-    public bool IsBuild { set; get; }
+    public int IsBuild { set; get; }
 
     void Awake()
     {
-        IsBuild = false;
+        IsBuild = 0;
     }
 
     
