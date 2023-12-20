@@ -1,19 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+    public Text life;
+    public GameObject MenuPanel;
+    private int lifeCount;
+
     public void StopGame()
     {
 
-        if (Time.timeScale == 0f)
+        Debug.Log(lifeCount);
+
+        bool CheckInt = int.TryParse(life.text, out lifeCount);
+
+        if (CheckInt && lifeCount > 0)
         {
-            Time.timeScale = 1f;
-        }
-        else
-        {
-            Time.timeScale = 0f;
+      
+            if (Time.timeScale == 0f)
+            {
+                Time.timeScale = 1f;
+                MenuPanel.SetActive(false);
+            }
+            else
+            {
+                Time.timeScale = 0f;
+                MenuPanel.SetActive(true);
+            }
+
         }
     }
+
 }
