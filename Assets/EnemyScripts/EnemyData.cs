@@ -1,31 +1,52 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Hpbar : MonoBehaviour
 {
-    [SerializeField] private Slider hpbar;
+    private SpriteRenderer spriteRenderer;
+    private bool isDie = false;
+   private EnemyStatsHandler enemyStatsHandler;
 
-    private float maxHp = 100;
-    private float currnetHp = 100;
-    void Start()
+
+    private void Awake()
     {
-        hpbar.value = currnetHp / maxHp;
+        Enemy enemy = GetComponent<Enemy>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        enemyStatsHandler = GetComponent<EnemyStatsHandler>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int damage)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isDie == true) return;
+
+        enemyStatsHandler.currentHealth -= damage; //타워데미지
+        Debug.Log(enemyStatsHandler.currentHealth);
+
+        StopCoroutine("HitAnimation");
+        StartCoroutine("HitAnimation");
+
+        if(enemyStatsHandler.currentHealth <= 0)
         {
-            currnetHp -= 10;
+            isDie = true;
+            Destroy(gameObject);
         }
-        HandleHp();
+    } 
+
+    private IEnumerator HitAnimation()
+    {
+        Color color = spriteRenderer.color;
+
+        color.a = 0.4f;
+        spriteRenderer.color = color;
+
+        yield return new WaitForSeconds(0.05f);
+
+        color.a = 1.0f;
+        spriteRenderer.color = color;
     }
 
-    private void HandleHp()
-    {
-        hpbar.value = Mathf.Lerp(hpbar.value, currnetHp / maxHp, Time.deltaTime * 10);
-    }
 }
