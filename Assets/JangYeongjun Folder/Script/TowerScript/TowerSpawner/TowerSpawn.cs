@@ -15,7 +15,7 @@ public class TowerSpawn : MonoBehaviour
         }
 
         GameObject selectedTower = towers[towerNumber - 1];
-        if (selectedTower != null || tile.IsBuild == false)
+        if (selectedTower != null && tile.IsBuild == false && DataManager.instance.player.Coin >= 200)
         {
             tile.IsBuild = true;
             Instantiate(selectedTower, tilePosition.position, Quaternion.identity);
