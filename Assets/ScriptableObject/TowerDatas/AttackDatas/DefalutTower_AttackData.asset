@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a52a70fa6beb91c4da1922fc38a974f5, type: 3}
-  m_Name: SpeedTower_AttackData
+  m_Name: DefalutTower_AttackData
   m_EditorClassIdentifier: 
   attackType: 1
   damage: 5
-  delay: 0.4
-  bulletImage: {fileID: 21300000, guid: ed0ba3c7571ea3e48874968f31c9b00a, type: 3}
+  delay: 1
+  bulletPrefab: {fileID: 163779958320249177, guid: c552137a96f2e5f49b9ca3d66c71a200, type: 3}
   bulletSpeed: 10
-  bulletEnterSize: 0.5
   splashArea: -1

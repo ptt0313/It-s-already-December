@@ -32,6 +32,7 @@ public class TargetScanningController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Enter");
         if (targets.Count >= scanCount) return;
         
 
