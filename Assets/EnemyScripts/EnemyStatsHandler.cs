@@ -12,8 +12,8 @@ public enum StatsChangeType
 public class EnemyStatsHandler : MonoBehaviour
 {
     public StatsChangeType ChangeType;
-   [Range(1,50)]public float maxHealth;
-    [Range(1, 50)] public float currentHealth;
+   [Range(1,200)]public float maxHealth;
+    [Range(1, 200)] public float currentHealth;
    [Range(1, 10)] public int speed;
 
     public  EnemyObjectable enemyObjectable;
