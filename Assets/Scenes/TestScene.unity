@@ -9518,6 +9518,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6799680589365963164, guid: fd165ebc5b099a545a959f578b6be382, type: 3}
+      propertyPath: life
+      value: 
+      objectReference: {fileID: 1264076866}
+    - target: {fileID: 6799680589365963164, guid: fd165ebc5b099a545a959f578b6be382, type: 3}
+      propertyPath: MenuPanel
+      value: 
+      objectReference: {fileID: 4122928538952498108}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
