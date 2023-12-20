@@ -13,7 +13,6 @@ public class Menu : MonoBehaviour
     {
 
   
-
         bool CheckInt = int.TryParse(life.text, out lifeCount);
 
         Debug.Log(lifeCount);
@@ -34,6 +33,17 @@ public class Menu : MonoBehaviour
         }
     }
 
+    public void BuildTime()
+    {
+        if(Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+        }
+        else if(Time.timeScale == 1f)
+        {
+            Time.timeScale = 0f;
+        }
+    }
     public void CloseMenuPanel()
     {
         Time.timeScale = 1f;
