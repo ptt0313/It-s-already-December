@@ -9,18 +9,17 @@ public class GameManager : MonoBehaviour
     public void DecreaseLife(int amount)
     {
         Life -= amount;
-        Debug.Log("Ã¼·Â°¨¼Ò");
+        Debug.Log("ì²´ë ¥ê°ì†Œ");
         if (Life <= 0)
         {
-
-            //¶óÀÌÇÁ°¡ 0ÀÌÇÏ°¡ ‰çÀ»½Ã °ÔÀÓ¿À¹ö¾À ºÎ¸£±â
+            //ë¼ì´í”„ê°€ 0ì´í•˜ê°€ ë¬ì„ì‹œ ê²Œì„ì˜¤ë²„ì”¬ ë¶€ë¥´ê¸°
             GameOver();
         }
     }
     private void GameOver()
     {
-        // °ÔÀÓ ¿À¹ö ½ÃÀÇ Ã³¸®
-        // Á¾·áÆË¾÷ OR °ÔÀÓ¿À¹ö¾À ºÒ·¯¿À±â
+        // ê²Œì„ ì˜¤ë²„ ì‹œì˜ ì²˜ë¦¬
+        // ì¢…ë£ŒíŒì—… OR ê²Œì„ì˜¤ë²„ì”¬ ë¶ˆëŸ¬ì˜¤ê¸°
         Debug.Log("Game Over");
     }
 }
