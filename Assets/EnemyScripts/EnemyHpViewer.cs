@@ -16,6 +16,6 @@ public class EnemyHpViewer : MonoBehaviour
 
     private void Update()
     {
-        hpSlider.value = StatHandler.maxHealth;
+        hpSlider.value =(float)StatHandler.currentHealth/(float)StatHandler.maxHealth;   
     }
 }
