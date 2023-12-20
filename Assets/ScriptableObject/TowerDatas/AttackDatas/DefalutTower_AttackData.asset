@@ -15,7 +15,6 @@ MonoBehaviour:
   attackType: 1
   damage: 5
   delay: 1
-  bulletPrefab: {fileID: 163779958320249177, guid: c552137a96f2e5f49b9ca3d66c71a200, type: 3}
-  bulletSpeed: 10
+  bulletSpeed: 2
   bulletEnterSize: 0.5
   splashArea: -1

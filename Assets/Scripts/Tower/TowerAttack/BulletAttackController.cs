@@ -61,7 +61,7 @@ public class BulletAttackController : MonoBehaviour
     {
         if ( _attackTarget == null && Vector3.Distance(_targetPosition, transform.position) < _positionDistanceCheck)
         {
-            Destroy(gameObject);
+            DestroyBulletObject();
         }
     }
 
@@ -78,7 +78,12 @@ public class BulletAttackController : MonoBehaviour
             // 여기에 체력 감소 로직 추가 필요
             Hpbar hpbar = collision.GetComponent<Hpbar>();
             hpbar.TakeDamage((int)_attackData.damage);
-            Destroy(gameObject);
+            DestroyBulletObject();
         }
+    }
+
+    private void DestroyBulletObject()
+    {
+        ProjectileManager.instance.RemoveBulletObject(gameObject);
     }
 }

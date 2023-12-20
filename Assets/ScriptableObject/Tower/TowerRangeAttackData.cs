@@ -8,7 +8,6 @@ using UnityEngine;
 public class TowerRangeAttackData : TowerAttackBaseData
 {
     [Header("bullet Info")]
-    public GameObject bulletPrefab;
     public float bulletSpeed;
     public float bulletEnterSize;
     public float splashArea;
