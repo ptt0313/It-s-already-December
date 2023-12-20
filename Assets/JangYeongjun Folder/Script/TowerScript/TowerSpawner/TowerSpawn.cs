@@ -9,6 +9,7 @@ public class TowerSpawn : MonoBehaviour
     public void SpawnTower(int towerNumber, Transform tilePosition)
     {
         Tiles tile = tilePosition.GetComponent<Tiles>();
+
         if (tile.IsBuild == true || towerNumber <= 0 || towerNumber > towers.Length)
         {
             return;
@@ -19,9 +20,13 @@ public class TowerSpawn : MonoBehaviour
         {
             tile.IsBuild = true;
             Instantiate(selectedTower, tilePosition.position, Quaternion.identity);
-            DataManager.instance.LoadPlayerData();
-            DataManager.instance.player.Coin -= 200;
-            DataManager.instance.SavePlayerData();
+            MonyControll(200);
         }
+    }
+    private void MonyControll(int coin)
+    {
+        DataManager.instance.LoadPlayerData();
+        DataManager.instance.player.Coin -= coin;
+        DataManager.instance.SavePlayerData();
     }
 }
