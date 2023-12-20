@@ -9879,6 +9879,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1517976915}
+    - target: {fileID: 7837721513546702161, guid: b1bc123e45c106f419eacee4a50d380e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseMenuPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 8264841604059835494, guid: b1bc123e45c106f419eacee4a50d380e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 

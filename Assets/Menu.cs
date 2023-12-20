@@ -34,4 +34,10 @@ public class Menu : MonoBehaviour
         }
     }
 
+    public void CloseMenuPanel()
+    {
+        Time.timeScale = 1f;
+        MenuPanel.SetActive(false);
+    }
+
 }
