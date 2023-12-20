@@ -6,8 +6,7 @@ public class Button : MonoBehaviour
 {
     public void OnButtonStage()
     {
-        SceneManager.LoadScene("TestScene");
-        Time.timeScale = 1f;
+        SceneManager.LoadScene("Stage1");
     }
 
     public void OnButtonQuit()
