@@ -17,11 +17,14 @@ public class TowerSpawn : MonoBehaviour
         GameObject selectedTower = towers[towerNumber - 1];
         if (selectedTower != null || tile.IsBuild == false)
         {
-            tile.IsBuild = true;
-            Instantiate(selectedTower, tilePosition.position, Quaternion.identity);
-            DataManager.instance.LoadPlayerData();
-            DataManager.instance.player.Coin -= 200;
-            DataManager.instance.SavePlayerData();
+            if (DataManager.instance.player.Coin >= 200)
+            {
+                tile.IsBuild = true;
+                Instantiate(selectedTower, tilePosition.position, Quaternion.identity);
+                DataManager.instance.LoadPlayerData();
+                DataManager.instance.player.Coin -= 200;
+                DataManager.instance.SavePlayerData();
+            }
         }
     }
 }

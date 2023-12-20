@@ -8,7 +8,6 @@ public class SelectTower : MonoBehaviour
     private Camera cameraMain;
     private Ray ray;
     private RaycastHit2D hit;
-    public int upgradeNumber = 0;
     Sprite nowSprite;
 
     private void Awake()
@@ -44,15 +43,17 @@ public class SelectTower : MonoBehaviour
 
         if (hit.collider != null && hit.collider.CompareTag("Tower") && spriteRenderer != null)
         {
-            if (nowSprite == changeTowerImage.TowerLv1)
+            if (nowSprite == changeTowerImage.TowerLv1 && DataManager.instance.player.Coin >= 400)
             {
                 changeTowerImage.TowerSpriteChange(spriteRenderer, changeTowerImage.TowerLv2);
                 DeductMoney(400);
+                nowSprite = changeTowerImage.TowerLv2;
             }
-            else if (nowSprite == changeTowerImage.TowerLv2)
+            else if (nowSprite == changeTowerImage.TowerLv2 && DataManager.instance.player.Coin >= 600)
             {
                 changeTowerImage.TowerSpriteChange(spriteRenderer, changeTowerImage.TowerLv3);
                 DeductMoney(600);
+                nowSprite = changeTowerImage.TowerLv3;
             }
             else
             {
