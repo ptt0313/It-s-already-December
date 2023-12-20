@@ -10,7 +10,6 @@ public class TowerRangeAttackController : MonoBehaviour
     private TowerAttackBaseData _rangeAttackData;
     private TargetScanningController _targetData;
 
-    private GameObject _bullet;
 
     private float _lastAttackDelay = 0f;
 
@@ -20,18 +19,6 @@ public class TowerRangeAttackController : MonoBehaviour
         _rangeAttackData = _infoHandler.TowerInfo.towerAttackData;
         _targetData = gameObject.GetComponent<TargetScanningController>();
         _bulletSpawnPosition = transform.Find("MainSprite").Find("AttackPivot");
-        if (_rangeAttackData is TowerRangeAttackData)
-        {
-            TowerRangeAttackData rangeAttackData = _rangeAttackData as TowerRangeAttackData;
-            if (rangeAttackData.bulletPrefab == null)
-            {
-                Debug.LogError("bullet link empty");
-            }
-            else
-            {
-                _bullet = rangeAttackData.bulletPrefab;
-            }
-        }
     }
 
     private void Update()
@@ -45,7 +32,8 @@ public class TowerRangeAttackController : MonoBehaviour
         {
             for (int i = 0; i < _targetData.Targets.Count; i++)
             {
-                GameObject bullet = Instantiate(_bullet, _bulletSpawnPosition.position, Quaternion.identity);
+                GameObject bullet = ProjectileManager.instance.GetBulletObject();
+                bullet.transform.position = _bulletSpawnPosition.position;
                 BulletAttackController bulletAttackController = bullet.GetComponent<BulletAttackController>();
                 bulletAttackController.InitBulletAttackData(_targetData.Targets[i], _rangeAttackData);
             }

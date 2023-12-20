@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers:
-  - {fileID: 4371130115410814733, guid: 3d350e5789d7d84439f1d51403099861, type: 3}
+  - {fileID: 2678836689270391732, guid: 2b5fcae2c100520478294adc670501fd, type: 3}
   - {fileID: 4371130115410814733, guid: 03a17649e0327694896f0a288e0791f2, type: 3}
   - {fileID: 9008250667988948399, guid: 26f30eed9cca848488e0b6dab97ed7ad, type: 3}
   changeTowerImage: {fileID: 0}
