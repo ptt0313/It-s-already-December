@@ -39,16 +39,16 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: FenceSprite
+      name: 
       originalName: 
-      pivot: {x: 0.49993116, y: 0.5002987}
+      pivot: {x: 0, y: 0}
       alignment: 0
-      border: {x: 14, y: 0, z: 305, w: 311}
+      border: {x: 0, y: 0, z: 0, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 520
-        height: 487
-      spriteID: 6be4e9ae5a042114a9a0806e1369cecc
+        width: 0
+        height: 0
+      spriteID: aecee571c56e0d24cbb9f99472a0dc92
     PhysicsOutlines: []
