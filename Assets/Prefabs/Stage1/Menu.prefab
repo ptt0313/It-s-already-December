@@ -31,7 +31,7 @@ Transform:
   m_Children:
   - {fileID: 5505403009878009112}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5150817022703602047
 SpriteRenderer:
@@ -1140,7 +1140,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4745117137511351907, guid: 405e5bad80d93be449a22c541af3a4f6, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: set_volume
         m_Mode: 0
