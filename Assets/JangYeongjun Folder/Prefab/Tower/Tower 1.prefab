@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7391238942966352713}
   - component: {fileID: 4546629676205752159}
-  - component: {fileID: 2385344154082675150}
   - component: {fileID: 4424726388057031576}
+  - component: {fileID: -6147544997089204174}
+  - component: {fileID: 4742304226369560524}
   m_Layer: 0
   m_Name: Tower 1
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +87,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &2385344154082675150
+--- !u!114 &4424726388057031576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4371130115410814733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1a751495b156a43940c8a5a476c8c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TowerLv1: {fileID: 21300000, guid: ac407c17ad93ab444ad6898f9dbffb1c, type: 3}
+  TowerLv2: {fileID: 21300000, guid: a71e2b379b3cfd6419261f00c40a6ec4, type: 3}
+  TowerLv3: {fileID: 21300000, guid: 64a0203cd87f7d0448fe87d2b446bc51, type: 3}
+--- !u!114 &-6147544997089204174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4371130115410814733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4e5d0da5f20224b953eb6eacaa2713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &4742304226369560524
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,19 +148,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &4424726388057031576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4371130115410814733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca1a751495b156a43940c8a5a476c8c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TowerLv1: {fileID: 21300000, guid: ac407c17ad93ab444ad6898f9dbffb1c, type: 3}
-  TowerLv2: {fileID: 21300000, guid: a71e2b379b3cfd6419261f00c40a6ec4, type: 3}
-  TowerLv3: {fileID: 21300000, guid: 64a0203cd87f7d0448fe87d2b446bc51, type: 3}
+  m_Radius: 0.6325

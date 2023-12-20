@@ -26,7 +26,7 @@ public class SelectTile : MonoBehaviour
             {
                 if(hit.transform.CompareTag("Tile"))
                 {
-                    towerSpawn.OnSpawnTower(towerNumber, hit.transform);
+                    towerSpawn.SpawnTower(towerNumber, hit.transform);
                 }
             }
         }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 810651214727719171}
   - component: {fileID: 391597683760511112}
   - component: {fileID: 4649707320900203854}
+  - component: {fileID: 3303463415919237623}
   m_Layer: 0
   m_Name: TowerSpawner
   m_TagString: Untagged
@@ -63,6 +64,7 @@ MonoBehaviour:
   - {fileID: 4371130115410814733, guid: 3d350e5789d7d84439f1d51403099861, type: 3}
   - {fileID: 4371130115410814733, guid: 03a17649e0327694896f0a288e0791f2, type: 3}
   - {fileID: 9008250667988948399, guid: 26f30eed9cca848488e0b6dab97ed7ad, type: 3}
+  changeTowerImage: {fileID: 0}
 --- !u!114 &4649707320900203854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,5 +75,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68e6e0ffb6d2f3346844fce021f89e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3303463415919237623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4964602197700478478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042e555835c939748b743a7eaa47de68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
