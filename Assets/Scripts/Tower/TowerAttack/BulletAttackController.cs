@@ -15,6 +15,7 @@ public class BulletAttackController : MonoBehaviour
     private LayerMask _enemyLayer;
 
     private Vector3 _targetPosition;
+    private SpriteRenderer _spriteRenderer;
 
     private float _positionDistanceCheck = 0.1f;
 
@@ -23,6 +24,7 @@ public class BulletAttackController : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _circleCollider2D = GetComponent<CircleCollider2D>();
         _enemyLayer = LayerMask.NameToLayer("Enemy");
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start()
@@ -44,7 +46,9 @@ public class BulletAttackController : MonoBehaviour
         {
             _attackData = attackData as TowerRangeAttackData;
         }
+        _spriteRenderer.sprite = _attackData.bulletImage;
     }
+
     private void ApplyTargetPosition()
     {
         if ( _attackTarget == null )
@@ -61,7 +65,7 @@ public class BulletAttackController : MonoBehaviour
     {
         if ( _attackTarget == null && Vector3.Distance(_targetPosition, transform.position) < _positionDistanceCheck)
         {
-            Destroy(gameObject);
+            DestroyBulletObject();
         }
     }
 
@@ -78,7 +82,12 @@ public class BulletAttackController : MonoBehaviour
             // 여기에 체력 감소 로직 추가 필요
             Hpbar hpbar = collision.GetComponent<Hpbar>();
             hpbar.TakeDamage((int)_attackData.damage);
-            Destroy(gameObject);
+            DestroyBulletObject();
         }
+    }
+
+    private void DestroyBulletObject()
+    {
+        ProjectileManager.instance.RemoveBulletObject(gameObject);
     }
 }
