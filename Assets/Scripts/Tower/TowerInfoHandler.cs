@@ -7,18 +7,18 @@ public class TowerInfoHandler : MonoBehaviour
     [SerializeField] private TowerInfoData towerInfo;
     public TowerInfoData TowerInfo { get { return towerInfo; } }
 
-    private Sprite _towerSprite;
+    private SpriteRenderer _towerSprite;
 
     private void Awake()
     {
-        //_towerSprite = GetComponentInChildren<Sprite>();
+        _towerSprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start()
     {
         if (_towerSprite != null)
         {
-            _towerSprite = towerInfo.towerImage;
+            _towerSprite.sprite = towerInfo.towerImage;
         }
     }
 }
