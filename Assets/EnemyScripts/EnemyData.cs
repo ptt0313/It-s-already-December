@@ -23,8 +23,8 @@ public class Hpbar : MonoBehaviour
     {
         if (isDie == true) return;
 
-        enemyStatsHandler.maxHealth -= damage; //타워데미지
-        Debug.Log(enemyStatsHandler.maxHealth);
+        enemyStatsHandler.currentHealth -= damage; //타워데미지
+        Debug.Log(enemyStatsHandler.currentHealth);
 
         StopCoroutine("HitAnimation");
         StartCoroutine("HitAnimation");
