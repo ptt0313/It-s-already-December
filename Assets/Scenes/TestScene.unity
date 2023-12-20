@@ -6500,6 +6500,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5261597936397700783, guid: dadbd74e798b4bf4e90963b0289da7b4, type: 3}
+      propertyPath: enemyHpSliderPrefab
+      value: 
+      objectReference: {fileID: 4577619472735393537, guid: 9dac79e0ca3b0714db47ae762f420fe1, type: 3}
+    - target: {fileID: 5261597936397700783, guid: dadbd74e798b4bf4e90963b0289da7b4, type: 3}
       propertyPath: wayPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1064656024}

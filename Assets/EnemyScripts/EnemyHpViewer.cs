@@ -13,9 +13,9 @@ public class EnemyHpViewer : MonoBehaviour
         StatHandler = statsHandler;
         hpSlider = GetComponent<Slider>();
     }
-}
 
-//    private void Update()
-//    {
-//        hpSlider.value = StatHandler.maxHealth -= 
-//}
+    private void Update()
+    {
+        hpSlider.value = StatHandler.maxHealth;
+    }
+}
