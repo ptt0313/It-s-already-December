@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DefaultEnemyInfo", menuName = "Enemy/Attack", order = 0)]
+[CreateAssetMenu(fileName = "DefaultEnemyInfo", menuName = "Enemy/ Enemy Info", order = 0)]  
 public class EnemyObjectable : ScriptableObject
 {
-    [Header("Attack Info")]
+    [Header("Enemy Info")]
 
     public int speed;
     public int maxHp;
