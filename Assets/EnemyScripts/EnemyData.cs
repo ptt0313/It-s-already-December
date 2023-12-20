@@ -29,7 +29,7 @@ public class Hpbar : MonoBehaviour
         StopCoroutine("HitAnimation");
         StartCoroutine("HitAnimation");
 
-        if(enemyStatsHandler.maxHealth <= 0)
+        if(enemyStatsHandler.currentHealth <= 0)
         {
             isDie = true;
             Destroy(gameObject);
