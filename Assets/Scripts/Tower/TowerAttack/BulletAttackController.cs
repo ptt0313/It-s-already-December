@@ -15,6 +15,7 @@ public class BulletAttackController : MonoBehaviour
     private LayerMask _enemyLayer;
 
     private Vector3 _targetPosition;
+    private SpriteRenderer _spriteRenderer;
 
     private float _positionDistanceCheck = 0.1f;
 
@@ -23,6 +24,7 @@ public class BulletAttackController : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _circleCollider2D = GetComponent<CircleCollider2D>();
         _enemyLayer = LayerMask.NameToLayer("Enemy");
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start()
@@ -44,7 +46,9 @@ public class BulletAttackController : MonoBehaviour
         {
             _attackData = attackData as TowerRangeAttackData;
         }
+        _spriteRenderer.sprite = _attackData.bulletImage;
     }
+
     private void ApplyTargetPosition()
     {
         if ( _attackTarget == null )
