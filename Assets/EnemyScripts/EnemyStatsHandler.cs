@@ -12,9 +12,19 @@ public enum StatsChangeType
 public class EnemyStatsHandler : MonoBehaviour
 {
     public StatsChangeType ChangeType;
-   [Range(1,50)]public int maxHealth;
+   [Range(1,50)]public float maxHealth;
+    [Range(1, 50)] public float currentHealth;
    [Range(1, 10)] public int speed;
 
     public  EnemyObjectable enemyObjectable;
 
+    public float MaxHealth => maxHealth;
+    public float CurrentHealth => currentHealth;
+
+    private void Awake()
+    {
+        currentHealth = maxHealth;
+    }
 }
+
+
