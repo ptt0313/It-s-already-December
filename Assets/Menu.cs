@@ -12,10 +12,11 @@ public class Menu : MonoBehaviour
     public void StopGame()
     {
 
-        Debug.Log(lifeCount);
+  
 
         bool CheckInt = int.TryParse(life.text, out lifeCount);
 
+        Debug.Log(lifeCount);
         if (CheckInt && lifeCount > 0)
         {
       
