@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac8502ddf0101942918d2c71b466b2a, type: 3}
   m_Name: DefalutTowerData
   m_EditorClassIdentifier: 
-  towerName: sample
+  towerName: Name
   towerCost: 1
   towerImage: {fileID: 0}
   scannigRange: 4

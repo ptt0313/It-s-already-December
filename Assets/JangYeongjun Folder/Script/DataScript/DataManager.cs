@@ -3,12 +3,12 @@ using UnityEngine;
 using System.IO;
 
 [System.Serializable]
-public class PalyerData
+public class PalyerData //플레이어의 데이터
 {
     public int Coin = 5000;
-    public int Score =0;
-    public int Round=1;
-    public string PlayerName="kevin";
+    public int Score = 0;
+    public int Round = 1;
+    public string PlayerName = "kevin";
 
 }
 
@@ -18,6 +18,7 @@ public class DataManager : MonoBehaviour
     public static DataManager instance;
     public int nowSlot;
     public PalyerData player = new PalyerData();
+    //싱글톤화
     private void Awake()
     {
         if (instance == null)
@@ -29,7 +30,7 @@ public class DataManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
-        path = Application.persistentDataPath + "/playerdata.json";
+        path = Application.persistentDataPath + "/playerdata.json"; //저장 경로
     }
     public void Start()
     {
