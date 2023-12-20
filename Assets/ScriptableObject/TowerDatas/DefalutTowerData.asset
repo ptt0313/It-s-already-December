@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: sample
   towerCost: 1
+  towerImage: {fileID: 0}
   scannigRange: 4
   targetLayer:
     serializedVersion: 2

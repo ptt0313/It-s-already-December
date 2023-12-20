@@ -16,19 +16,20 @@ public class Hpbar : MonoBehaviour
     {
         Enemy enemy = GetComponent<Enemy>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-       
-
+        enemyStatsHandler = GetComponent<EnemyStatsHandler>();
     }
+
     public void TakeDamage(int damage)
     {
         if (isDie == true) return;
 
-      enemyStatsHandler.maxHealth-=damage; //타워데미지
+        enemyStatsHandler.maxHealth -= damage; //타워데미지
+        Debug.Log(enemyStatsHandler.maxHealth);
 
         StopCoroutine("HitAnimation");
         StartCoroutine("HitAnimation");
 
-        if(enemyStatsHandler.maxHealth <0)
+        if(enemyStatsHandler.maxHealth <= 0)
         {
             isDie = true;
             Destroy(gameObject);

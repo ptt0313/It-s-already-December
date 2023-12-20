@@ -16,7 +16,7 @@ public class BulletAttackController : MonoBehaviour
 
     private Vector3 _targetPosition;
 
-    private float _positionDistanceCheck = 0.01f;
+    private float _positionDistanceCheck = 0.1f;
 
     private void Awake()
     {
@@ -76,6 +76,8 @@ public class BulletAttackController : MonoBehaviour
         if (collision.gameObject == _attackTarget.gameObject) // && ((1 << collision.gameObject.layer) & _enemyLayer.value) != 0)
         {
             // 여기에 체력 감소 로직 추가 필요
+            Hpbar hpbar = collision.GetComponent<Hpbar>();
+            hpbar.TakeDamage((int)_attackData.damage);
             Destroy(gameObject);
         }
     }
