@@ -6,6 +6,11 @@
 그래서 유저들이 옛날 추억을 다시 느낄 수 있게 해주고 색다른 재미를 주기 위해 노력했다. 
 
 
+##  개발 환경
+
+![Unity](https://img.shields.io/badge/-Unity-%23000000?style=flat-square&logo=Unity)
+![C#](https://img.shields.io/badge/-C%23-%7ED321?logo=Csharp&style=flat)
+
 
 ## 팀원 : 신용욱(팀장), 황선범, 조두희, 전수현, 장영준
 
