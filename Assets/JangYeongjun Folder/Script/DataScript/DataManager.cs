@@ -5,7 +5,7 @@ using System.IO;
 [System.Serializable]
 public class PalyerData //플레이어의 데이터
 {
-    public int Coin = 5000;
+    public int Coin = 500;
     public int Score = 0;
     public int Round = 1;
     public string PlayerName = "kevin";
