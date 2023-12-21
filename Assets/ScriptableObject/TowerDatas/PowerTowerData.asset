@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fac8502ddf0101942918d2c71b466b2a, type: 3}
-  m_Name: SpeedTowerData
+  m_Name: PowerTowerData
   m_EditorClassIdentifier: 
   towerName: Name
-  towerCost: 100
-  towerImage: {fileID: 21300000, guid: c566543cb8d28fe45a4bc893f09fd918, type: 3}
-  scannigRange: 4
+  towerCost: 200
+  towerImage: {fileID: 21300000, guid: c7cface69ff634b439924215671bd51a, type: 3}
+  scannigRange: 5
   targetLayer:
     serializedVersion: 2
     m_Bits: 64
   targetCount: 1
-  towerAttackData: {fileID: 11400000, guid: 338ec347da43f554fa4c903929a2d21f, type: 2}
+  towerAttackData: {fileID: 11400000, guid: 7e0b18b3e23fcb34da4cfa5b5ccb8555, type: 2}
