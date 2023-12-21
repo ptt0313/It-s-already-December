@@ -34,7 +34,7 @@ public class DataManager : MonoBehaviour
     }
     public void Start()
     {
-        SavePlayerData();
+        SavePlayerData(); //슬롯에 저장 기능이 다 구현 되면 삭제 하기
     }
     public void SavePlayerData()
     {

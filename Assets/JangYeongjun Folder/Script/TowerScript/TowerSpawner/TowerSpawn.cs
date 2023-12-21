@@ -17,11 +17,12 @@ public class TowerSpawn : MonoBehaviour
         }
 
         GameObject selectedTower = towers[towerNumber - 1];
-        if (selectedTower != null && tile.IsBuild == false && DataManager.instance.player.Coin >= 200)
+        TowerInfoHandler towerInfoHandler = selectedTower.GetComponent<TowerInfoHandler>();
+        if (selectedTower != null && tile.IsBuild == false && DataManager.instance.player.Coin >= towerInfoHandler.TowerInfo.towerCost)
         {
             tile.IsBuild = true;
             Instantiate(selectedTower, tilePosition.position, Quaternion.identity);
-            MonyControll(200);
+            MonyControll(towerInfoHandler.TowerInfo.towerCost);
         }
     }
     private void MonyControll(int coin)
