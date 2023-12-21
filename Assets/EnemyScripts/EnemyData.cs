@@ -33,15 +33,8 @@ public class Hpbar : MonoBehaviour
         {
             isDie = true;
             Destroy(gameObject);
-            MonyControll(100);
         }
-    }
-    private void MonyControll(int coin)
-    {
-        DataManager.instance.LoadPlayerData();
-        DataManager.instance.player.Coin += coin;
-        DataManager.instance.SavePlayerData();
-    }
+    } 
 
     private IEnumerator HitAnimation()
     {
